@@ -1,0 +1,34 @@
+﻿<Window x:Class="ModuleFour.View.Validation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ModuleFour.View"
+        mc:Ignorable="d"
+        Title="Validation" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal"
+                    Margin="30">
+            <Button Content="Получить данные"
+                    Height="40"
+                    Width="300" Click="GetRequestButtonClick"/>
+            <TextBlock x:Name="FullNameTextBlock"
+                       Margin="100 0 0 0"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1"
+                    Orientation="Horizontal"
+                    Margin="30">
+            <Button
+                Content="Отправить результат теста"
+                Height="40"
+                Width="300" Click="SendResultButtonClick"/>
+            <TextBlock x:Name="WarningFullNameTextBlock"
+                       Margin="100 0 0 0"/>
+        </StackPanel>
+    </Grid>
+</Window>
